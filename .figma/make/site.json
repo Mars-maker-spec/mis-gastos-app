@@ -1,0 +1,10 @@
+{
+  "description": "Manage personal expenses effortlessly with this intuitive app designed for students, featuring expense tracking, budgeting, and insightful summaries.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

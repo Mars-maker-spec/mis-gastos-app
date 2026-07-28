@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --background: #f6f1e4;
+  --foreground: #1a3a28;
+  --card: #f6f1e4;
+  --card-foreground: #1a3a28;
+  --primary: #2f6f4e;
+  --primary-foreground: #f6f1e4;
+  --secondary: #e8e0cc;
+  --secondary-foreground: #2f6f4e;
+  --muted: #ede7d5;
+  --muted-foreground: #6b7c6a;
+  --accent: #2f6f4e;
+  --accent-foreground: #f6f1e4;
+  --border: rgba(47, 111, 78, 0.2);
+  --ring: #2f6f4e;
+  --radius: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e8e2d5;
+  font-family: 'Space Mono', monospace;
+  color: #1a3a28;
+}
+
+/* Hide scrollbars until scrolling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(47, 111, 78, 0.2);
+  border-radius: 2px;
+}
+
+.font-serif {
+  font-family: 'Fraunces', serif !important;
+}
+.font-mono {
+  font-family: 'Space Mono', monospace !important;
+}
+
+/* Receipt paper texture */
+.receipt-paper {
+  background-color: #f6f1e4;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgba(47, 111, 78, 0.035) 24px
+    );
+}
+
+/* Torn paper edge top */
+.receipt-top::before {
+  content: '';
+  display: block;
+  height: 12px;
+  background-image: radial-gradient(circle at 6px 12px, transparent 6px, #e8e2d5 6px);
+  background-size: 12px 12px;
+  background-position: 0 0;
+  margin-bottom: -1px;
+}
+
+/* Torn paper edge bottom */
+.receipt-bottom::after {
+  content: '';
+  display: block;
+  height: 12px;
+  background-image: radial-gradient(circle at 6px 0, transparent 6px, #e8e2d5 6px);
+  background-size: 12px 12px;
+  background-position: 0 0;
+  margin-top: -1px;
+}
+
+input, select, textarea {
+  font-family: 'Space Mono', monospace;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2f6f4e !important;
+  box-shadow: 0 0 0 2px rgba(47, 111, 78, 0.15);
+}
